@@ -5,22 +5,6 @@
       src="assets/img/bg_portfolio.jpg"
       style="width: 100%"
     />
-
-    <div class="separator separator-bottom separator-skew">
-      <svg
-        x="0"
-        y="0"
-        viewBox="0 0 2560 100"
-        preserveAspectRatio="none"
-        version="1.1"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <polygon
-          class="fill-secondary"
-          points="2560 0 2560 100 0 100"
-        ></polygon>
-      </svg>
-    </div>
   </section>
   <section class="section bg-secondary">
     <div class="container">
@@ -40,6 +24,11 @@
                 style="text-align: center"
               >
                 <button
+                  (click)="
+                    goToLink(
+                      'https://www.linkedin.com/in/salman-qureshi-a2b117201/'
+                    )
+                  "
                   class="btn btn-sm btn-icon btn-3 btn-primary"
                   type="button"
                 >
@@ -47,6 +36,7 @@
                   <span class="btn-inner--text">Connect</span>
                 </button>
                 <button
+                  (click)="copyUrl()"
                   class="btn btn-sm btn-icon btn-3 btn-primary"
                   type="button"
                 >
@@ -66,7 +56,7 @@
                   <span class="description"> Repos </span>
                 </div>
                 <div>
-                  <span class="heading"> 89 </span>
+                  <span class="heading"> 987 </span>
                   <span class="description"> Commits </span>
                 </div>
               </div>
@@ -91,299 +81,408 @@
             </div>
           </div>
 
-          <br />
-
-          <div class="container">
-            <div class="social-line social-line-blue text-center">
-              <div class="container">
-                <div class="row justify-content-center">
-                  <div
-                    class="col-md-12 social-line social-line-big-icons bg-default"
-                  >
-                    <a href="javascript:;">
-                      <h4 class="h4 text-white font-weight-bold mb-4">
-                        Frontend Tools & Technologies
-                      </h4>
-                    </a>
-                  </div>
-                </div>
+          <hr class="style6" />
+          <!-- Header Info -->
+          <div class="text-center">
+            <div class="row">
+              <div class="col">
+                <button
+                  (click)="goToLink('https://medium.com/@salmanqureshi97')"
+                  type="button"
+                  class="btn btn-primary btn-lg btn-block"
+                >
+                  <i class="fab fa-medium-m" aria-hidden="true"></i>
+                  Medium Articles
+                </button>
+              </div>
+              <div class="col">
+                <button
+                  (click)="
+                    goToLink(
+                      'https://github.com/SalmanQureshi97?tab=repositories'
+                    )
+                  "
+                  type="button"
+                  class="btn btn-primary btn-lg btn-block"
+                >
+                  <i class="fab fa-github-square" aria-hidden="true"></i>
+                  Github Repos
+                </button>
               </div>
             </div>
-
-            <br />
-
-            <div class="social-line social-line-big-icons">
-              <div style="text-align: center" class="container">
-                <div class="row">
-                  <div class="col-lg-4 col-md-6 mb-md-4 mb-lg-0">
-                    <a
-                      class="btn btn-gradient-facebook btn-footer"
-                      href="javascript:;"
-                    >
-                      <img
-                        style="width: 100%; height: 180px"
-                        src="../assets/img/tools/angular.svg"
-                        alt="..."
-                        class="img-thumbnail"
-                      />
-                      <p class="title">Angular</p>
-
-                      <span class="fa fa-star checked"></span>
-                      <span class="fa fa-star checked"></span>
-                      <span class="fa fa-star checked"></span>
-                      <span class="fa fa-star"></span>
-                      <span class="fa fa-star"></span>
-                    </a>
-                  </div>
-                  <div class="col-lg-4 col-md-6 mb-md-4 mb-lg-0">
-                    <a
-                      class="btn btn-gradient-facebook btn-footer"
-                      href="javascript:;"
-                    >
-                      <img
-                        style="width: 100%; height: 180px"
-                        src="../assets/img/tools/ionic.png"
-                        alt="..."
-                        class="img-thumbnail"
-                      />
-                      <p class="title">Ionic</p>
-
-                      <span class="fa fa-star checked"></span>
-                      <span class="fa fa-star checked"></span>
-                      <span class="fa fa-star checked"></span>
-                      <span class="fa fa-star"></span>
-                      <span class="fa fa-star"></span>
-                    </a>
-                  </div>
-
-                  <div class="col-lg-4 col-md-6 mb-md-4 mb-lg-0">
-                    <a
-                      class="btn btn-gradient-facebook btn-footer"
-                      href="javascript:;"
-                    >
-                      <img
-                        style="width: 100%; height: 180px"
-                        src="../assets/img/tools/react.png"
-                        alt="..."
-                        class="img-thumbnail"
-                      />
-                      <p class="title">React Native</p>
-
-                      <span class="fa fa-star checked"></span>
-                      <span class="fa fa-star checked"></span>
-                      <span class="fa fa-star checked"></span>
-                      <span class="fa fa-star"></span>
-                      <span class="fa fa-star"></span>
-                    </a>
-                  </div>
-                </div>
-              </div>
+            <div class="h6 font-weight-300">
+              <i class="ni location_pin mr-2"> </i>
             </div>
-            <br />
-
-            <br />
           </div>
+        </div>
+      </div>
+    </div>
 
-          <div class="container-fluid">
-            <div class="social-line social-line-blue text-center">
-              <div class="container">
-                <div class="row justify-content-center">
-                  <div
-                    class="col-md-12 social-line social-line-big-icons bg-default"
-                  >
-                    <a href="javascript:;">
-                      <h4 class="h4 text-white font-weight-bold mb-4">
-                        Backend Tools & Technologies
-                      </h4>
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <br />
-
-            <div class="social-line social-line-big-icons">
-              <div style="text-align: center" class="container">
+    <!-- Tools & Technology Section -->
+    <div class="container">
+      <div class="row">
+        <div class="col-sm">
+          <div
+            class="cardFlip"
+            style="height: 15rem"
+            (mouseover)="cardClicked(1, $event)"
+            (mouseout)="cardClicked(1, $event)"
+            (click)="cardClicked(1, $event)"
+            [@cardFlip]="flip1"
+          >
+            <div class="face back">
+              <div class="card" style="width: 100%; text-align: center">
+                <img
+                  class="card-img-top"
+                  src="../assets/img/tools/angular.png"
+                  alt="Card image cap"
+                />
                 <div class="row">
-                  <div class="col-lg-3 col-md-6 mb-md-4 mb-lg-0">
-                    <a
-                      class="btn btn-gradient-facebook btn-footer"
-                      href="javascript:;"
-                    >
-                      <img
-                        style="width: 100%; height: 180px"
-                        src="../assets/img/tools/mongodb.jpg"
-                        alt="..."
-                        class="img-thumbnail"
-                      />
-                      <p class="title">MongoDB</p>
-
-                      <span class="fa fa-star checked"></span>
-                      <span class="fa fa-star checked"></span>
-                      <span class="fa fa-star checked"></span>
-                      <span class="fa fa-star"></span>
-                      <span class="fa fa-star"></span>
-                    </a>
-                  </div>
-                  <div class="col-lg-3 col-md-6 mb-md-4 mb-lg-0">
-                    <a
-                      class="btn btn-gradient-facebook btn-footer"
-                      href="javascript:;"
-                    >
-                      <img
-                        style="width: 100%; height: 180px"
-                        src="../assets/img/tools/django.png"
-                        alt="..."
-                        class="img-thumbnail"
-                      />
-                      <p class="title">Django</p>
-
-                      <span class="fa fa-star checked"></span>
-                      <span class="fa fa-star checked"></span>
-                      <span class="fa fa-star checked"></span>
-                      <span class="fa fa-star"></span>
-                      <span class="fa fa-star"></span>
-                    </a>
-                  </div>
-                  <div class="col-lg-3 col-md-6 mb-md-4 mb-lg-0">
-                    <a
-                      class="btn btn-gradient-facebook btn-footer"
-                      href="javascript:;"
-                    >
-                      <img
-                        style="width: 100%; height: 180px"
-                        src="../assets/img/tools/nodejs.png"
-                        alt="..."
-                        class="img-thumbnail"
-                      />
-                      <p class="title">NodeJS</p>
-
-                      <span class="fa fa-star checked"></span>
-                      <span class="fa fa-star checked"></span>
-                      <span class="fa fa-star checked"></span>
-                      <span class="fa fa-star"></span>
-                      <span class="fa fa-star"></span>
-                    </a>
-                  </div>
-                  <div class="col-lg-3 col-md-6 mb-md-4 mb-lg-0">
-                    <a
-                      class="btn btn-gradient-facebook btn-footer"
-                      href="javascript:;"
-                    >
-                      <img
-                        style="width: 100%; height: 180px"
-                        src="../assets/img/tools/sqldb.png"
-                        alt="..."
-                        class="img-thumbnail"
-                      />
-                      <p class="title">PostgreSQL DB</p>
-
-                      <span class="fa fa-star checked"></span>
-                      <span class="fa fa-star checked"></span>
-                      <span class="fa fa-star checked"></span>
-                      <span class="fa fa-star"></span>
-                      <span class="fa fa-star"></span>
-                    </a>
-                  </div>
+                  <h3 class="title">Angular</h3>
+                </div>
+                <a style="margin-top: -15px" href="javascript:;">
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star"></span>
+                  <span class="fa fa-star"></span>
+                </a>
+              </div>
+            </div>
+            <div class="face front" style="height: 15rem; overflow: auto">
+              <div class="card" style="height: 15rem; width: 100%">
+                <div class="card-body">
+                  <p
+                    style="color: black; height: 15rem; font-size: medium"
+                    class="card-text"
+                  >
+                    Angular is my go to tool for frontend development. I worked
+                    on projects related to ERP, E-commerce and Personal/Business
+                    websites. The modularization and resuability factor of
+                    Angular is one the motivating factors that comes with it.
+                  </p>
                 </div>
               </div>
             </div>
-            <br />
-
-            <br />
           </div>
-
-          <div class="container-fluid">
-            <div class="social-line social-line-blue text-center">
-              <div class="container">
-                <div class="row justify-content-center">
-                  <div
-                    class="col-md-12 social-line social-line-big-icons bg-default"
-                  >
-                    <a href="javascript:;">
-                      <h4 class="h4 text-white font-weight-bold mb-4">
-                        Infrastructure Tools & Technologies
-                      </h4>
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <br />
-
-            <div class="social-line social-line-big-icons">
-              <div style="text-align: center" class="container">
+        </div>
+        <div class="col-sm">
+          <div
+            class="cardFlip"
+            style="height: 15rem"
+            (mouseover)="cardClicked(2, $event)"
+            (mouseout)="cardClicked(2, $event)"
+            (click)="cardClicked(2, $event)"
+            [@cardFlip]="flip2"
+          >
+            <div class="face back" style="height: 15rem">
+              <div class="card" style="width: 100%; text-align: center">
+                <img
+                  class="card-img-top"
+                  src="../assets/img/tools/ionic.png"
+                  alt="Card image cap"
+                />
                 <div class="row">
-                  <div class="col-lg-4 col-md-6 mb-md-4 mb-lg-0">
-                    <a
-                      class="btn btn-gradient-facebook btn-footer"
-                      href="javascript:;"
-                    >
-                      <img
-                        style="width: 100%; height: 180px"
-                        src="../assets/img/tools/aws.png"
-                        alt="..."
-                        class="img-thumbnail"
-                      />
-                      <p class="title">AWS</p>
-
-                      <span class="fa fa-star checked"></span>
-                      <span class="fa fa-star checked"></span>
-                      <span class="fa fa-star checked"></span>
-                      <span class="fa fa-star"></span>
-                      <span class="fa fa-star"></span>
-                    </a>
-                  </div>
-
-                  <div class="col-lg-4 col-md-6 mb-md-4 mb-lg-0">
-                    <a
-                      class="btn btn-gradient-facebook btn-footer"
-                      href="javascript:;"
-                    >
-                      <img
-                        style="width: 100%; height: 180px"
-                        src="../assets/img/tools/docker.png"
-                        alt="..."
-                        class="img-thumbnail"
-                      />
-                      <p class="title">Docker</p>
-
-                      <span class="fa fa-star checked"></span>
-                      <span class="fa fa-star checked"></span>
-                      <span class="fa fa-star checked"></span>
-                      <span class="fa fa-star"></span>
-                      <span class="fa fa-star"></span>
-                    </a>
-                  </div>
-
-                  <div class="col-lg-4 col-md-6 mb-md-4 mb-lg-0">
-                    <a
-                      class="btn btn-gradient-facebook btn-footer"
-                      href="javascript:;"
-                    >
-                      <img
-                        style="width: 100%; height: 180px"
-                        src="../assets/img/tools/heroku.png"
-                        alt="..."
-                        class="img-thumbnail"
-                      />
-                      <p class="title">Heroku</p>
-
-                      <span class="fa fa-star checked"></span>
-                      <span class="fa fa-star checked"></span>
-                      <span class="fa fa-star checked"></span>
-                      <span class="fa fa-star"></span>
-                      <span class="fa fa-star"></span>
-                    </a>
-                  </div>
+                  <h3 class="title">Ionic</h3>
+                </div>
+                <a style="margin-top: -15px" href="javascript:;">
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star"></span>
+                  <span class="fa fa-star"></span>
+                </a>
+              </div>
+            </div>
+            <div class="face front" style="height: 15rem; overflow: auto">
+              <div class="card" style="height: 15rem; width: 100%">
+                <div class="card-body">
+                  <p
+                    style="color: black; height: 15rem; font-size: medium"
+                    class="card-text"
+                  >
+                    Angular is my go to tool for frontend development. I worked
+                    on projects related to ERP, E-commerce and Personal/Business
+                    websites. The modularization and resuability factor of
+                    Angular is one the motivating factors that comes with it.
+                  </p>
                 </div>
               </div>
             </div>
-            <br />
-
-            <br />
+          </div>
+        </div>
+        <div class="col-sm">
+          <div
+            class="cardFlip"
+            style="height: 15rem"
+            (mouseover)="cardClicked(3, $event)"
+            (mouseout)="cardClicked(3, $event)"
+            (click)="cardClicked(3, $event)"
+            [@cardFlip]="flip3"
+          >
+            <div class="face back" style="color: white">
+              <div class="card" style="width: 100%; text-align: center">
+                <img
+                  class="card-img-top"
+                  src="../assets/img/tools/react.jpg"
+                  alt="Card image cap"
+                />
+                <div class="row">
+                  <h3 class="title">React Native</h3>
+                </div>
+                <a style="margin-top: -15px" href="javascript:;">
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star"></span>
+                  <span class="fa fa-star"></span>
+                </a>
+              </div>
+            </div>
+            <div class="face front" style="height: 15rem; overflow: auto">
+              <div class="card" style="height: 15rem; width: 100%">
+                <div class="card-body">
+                  <p
+                    style="color: black; height: 15rem; font-size: medium"
+                    class="card-text"
+                  >
+                    Angular is my go to tool for frontend development. I worked
+                    on projects related to ERP, E-commerce and Personal/Business
+                    websites. The modularization and resuability factor of
+                    Angular is one the motivating factors that comes with it.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm">
+          <div
+            class="cardFlip"
+            style="height: 15rem"
+            (mouseover)="cardClicked(4, $event)"
+            (mouseout)="cardClicked(4, $event)"
+            (click)="cardClicked(4, $event)"
+            [@cardFlip]="flip4"
+          >
+            <div class="face back">
+              <div class="card" style="width: 100%; text-align: center">
+                <img
+                  class="card-img-top"
+                  src="../assets/img/tools/aws.png"
+                  alt="Card image cap"
+                />
+                <div class="row">
+                  <h3 class="title">Amazon Web Services</h3>
+                </div>
+                <a style="margin-top: -15px" href="javascript:;">
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star"></span>
+                  <span class="fa fa-star"></span>
+                </a>
+              </div>
+            </div>
+            <div class="face front" style="height: 15rem; overflow: auto">
+              <div class="card" style="height: 15rem; width: 100%">
+                <div class="card-body">
+                  <p
+                    style="color: black; height: 15rem; font-size: medium"
+                    class="card-text"
+                  >
+                    Angular is my go to tool for frontend development. I worked
+                    on projects related to ERP, E-commerce and Personal/Business
+                    websites. The modularization and resuability factor of
+                    Angular is one the motivating factors that comes with it.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm">
+          <div
+            class="cardFlip"
+            style="height: 15rem"
+            (mouseover)="cardClicked(5, $event)"
+            (mouseout)="cardClicked(5, $event)"
+            (click)="cardClicked(5, $event)"
+            [@cardFlip]="flip5"
+          >
+            <div class="face back" style="height: 15rem">
+              <div class="card" style="width: 100%; text-align: center">
+                <img
+                  class="card-img-top"
+                  src="../assets/img/tools/nodejs.png"
+                  alt="Card image cap"
+                />
+                <div class="row">
+                  <h3 class="title">NodeJs</h3>
+                </div>
+                <a style="margin-top: -15px" href="javascript:;">
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star"></span>
+                  <span class="fa fa-star"></span>
+                </a>
+              </div>
+            </div>
+            <div class="face front" style="height: 15rem; overflow: auto">
+              <div class="card" style="height: 15rem; width: 100%">
+                <div class="card-body">
+                  <p
+                    style="color: black; height: 15rem; font-size: medium"
+                    class="card-text"
+                  >
+                    Angular is my go to tool for frontend development. I worked
+                    on projects related to ERP, E-commerce and Personal/Business
+                    websites. The modularization and resuability factor of
+                    Angular is one the motivating factors that comes with it.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm">
+          <div
+            class="cardFlip"
+            style="height: 15rem"
+            (mouseover)="cardClicked(6, $event)"
+            (mouseout)="cardClicked(6, $event)"
+            (click)="cardClicked(6, $event)"
+            [@cardFlip]="flip6"
+          >
+            <div class="face back" style="color: white">
+              <div class="card" style="width: 100%; text-align: center">
+                <img
+                  class="card-img-top"
+                  src="../assets/img/tools/mongodb.jpg"
+                  alt="Card image cap"
+                />
+                <div class="row">
+                  <h3 class="title">MongoDB</h3>
+                </div>
+                <a style="margin-top: -15px" href="javascript:;">
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star"></span>
+                  <span class="fa fa-star"></span>
+                </a>
+              </div>
+            </div>
+            <div class="face front" style="height: 15rem; overflow: auto">
+              <div class="card" style="height: 15rem; width: 100%">
+                <div class="card-body">
+                  <p
+                    style="color: black; height: 15rem; font-size: medium"
+                    class="card-text"
+                  >
+                    Angular is my go to tool for frontend development. I worked
+                    on projects related to ERP, E-commerce and Personal/Business
+                    websites. The modularization and resuability factor of
+                    Angular is one the motivating factors that comes with it.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm">
+          <div
+            class="cardFlip"
+            style="height: 15rem"
+            (mouseover)="cardClicked(7, $event)"
+            (mouseout)="cardClicked(7, $event)"
+            [@cardFlip]="flip7"
+            (click)="cardClicked(7, $event)"
+          >
+            <div class="face back">
+              <div class="card" style="width: 100%; text-align: center">
+                <img
+                  class="card-img-top"
+                  src="../assets/img/tools/django.png"
+                  alt="Card image cap"
+                />
+                <div class="row">
+                  <h3 class="title">Django Framework</h3>
+                </div>
+                <a style="margin-top: -15px" href="javascript:;">
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star"></span>
+                  <span class="fa fa-star"></span>
+                </a>
+              </div>
+            </div>
+            <div class="face front" style="height: 15rem; overflow: auto">
+              <div class="card" style="height: 15rem; width: 100%">
+                <div class="card-body">
+                  <p
+                    style="color: black; height: 15rem; font-size: medium"
+                    class="card-text"
+                  >
+                    Angular is my go to tool for frontend development. I worked
+                    on projects related to ERP, E-commerce and Personal/Business
+                    websites. The modularization and resuability factor of
+                    Angular is one the motivating factors that comes with it.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm">
+          <div
+            class="cardFlip"
+            style="height: 15rem"
+            (mouseover)="cardClicked(8, $event)"
+            (mouseout)="cardClicked(8, $event)"
+            (click)="cardClicked(8, $event)"
+            [@cardFlip]="flip8"
+          >
+            <div class="face back" style="height: 15rem">
+              <div class="card" style="width: 100%; text-align: center">
+                <img
+                  class="card-img-top"
+                  src="../assets/img/tools/docker.png"
+                  alt="Card image cap"
+                />
+                <div class="row">
+                  <h3 class="title">Docker</h3>
+                </div>
+                <a style="margin-top: -15px" href="javascript:;">
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star"></span>
+                  <span class="fa fa-star"></span>
+                </a>
+              </div>
+            </div>
+            <div class="face front" style="height: 15rem; overflow: auto">
+              <div class="card" style="height: 15rem; width: 100%">
+                <div class="card-body">
+                  <p
+                    style="color: black; height: 15rem; font-size: medium"
+                    class="card-text"
+                  >
+                    Angular is my go to tool for frontend development. I worked
+                    on projects related to ERP, E-commerce and Personal/Business
+                    websites. The modularization and resuability factor of
+                    Angular is one the motivating factors that comes with it.
+                  </p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>

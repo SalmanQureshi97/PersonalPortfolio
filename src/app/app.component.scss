@@ -1,3 +1,37 @@
 .checked {
   color: orange;
 }
+:host {
+  display: block;
+  perspective: 600px;
+}
+
+.cardFlip {
+  box-shadow: 10px 10px 43px -18px rgba(0, 0, 0, 0.75);
+  border-radius: 5px;
+  height: 100px;
+  width: 100%;
+  cursor: pointer;
+  position: relative;
+  transform-style: preserve-3d;
+  margin-bottom: 50px;
+}
+
+.face {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+  backface-visibility: hidden;
+}
+
+.front {
+  transform: rotateY(180deg);
+}
+
+hr.style6 {
+  width: 100%;
+  background-color: #fff;
+  border-top: 3px dotted #000000;
+}
