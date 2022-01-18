@@ -1,5 +1,5 @@
 import { HttpClient } from '@angular/common/http';
-import { Component } from '@angular/core';
+import { Component, Inject } from '@angular/core';
 import {
   trigger,
   state,
@@ -8,6 +8,8 @@ import {
   animate,
 } from '@angular/animations';
 import { Router } from '@angular/router';
+
+import { BreakpointObserver, BreakpointState } from '@angular/cdk/layout';
 
 @Component({
   selector: 'app-root',
@@ -35,6 +37,9 @@ import { Router } from '@angular/router';
 export class AppComponent {
   title = 'Portfolio';
   githubStats: any;
+  hidden = false;
+  marginTop = '0px';
+  tester = false;
 
   flip1: string = 'default';
   flip2: string = 'default';
@@ -45,12 +50,52 @@ export class AppComponent {
   flip7: string = 'default';
   flip8: string = 'default';
 
-  constructor(private client: HttpClient, private router: Router) {
+  constructor(
+    private client: HttpClient,
+    private router: Router,
+    @Inject(BreakpointObserver) private breakpointObserver: BreakpointObserver
+  ) {
     this.client
       .get('https://api.github.com/users/salmanqureshi97')
       .subscribe((data) => {
         this.githubStats = data;
       });
+
+    this.breakpointObserver
+      .observe(['(max-width: 992px)', '(max-width: 574px)'])
+      .subscribe((result: BreakpointState) => {
+        let bp_lower = result.breakpoints['(max-width: 574px)'];
+        let bp_upper = result.breakpoints['(max-width: 992px)'];
+        console.log(bp_lower, bp_upper);
+        if (!bp_lower && bp_upper) {
+          this.hidden = true;
+          this.marginTop = '90px';
+        }
+        if (!bp_upper && !bp_lower) {
+          this.hidden = false;
+          this.marginTop = '0px';
+        }
+        if (bp_lower && bp_upper) {
+          this.hidden = false;
+          this.marginTop = '0px';
+        }
+        // if (bp_572) {
+        //   this.hidden = false;
+        // } else {
+        //   // show stuff
+        //   this.hidden = true;
+        // }
+        // if (bp_992) {
+        //   this.hidden = true;
+        // } else {
+        //   // show stuff
+        //   this.hidden = false;
+        // }
+      });
+
+    if (window.innerWidth > 572 && window.innerWidth < 972) {
+      this.hidden = true;
+    }
   }
 
   ngOnInit() {
@@ -63,6 +108,7 @@ export class AppComponent {
   }
 
   cardClicked(id: any, event: any) {
+    this.tester = true;
     event.preventDefault();
     if (screen.orientation.type === 'landscape-primary') {
       if (event.type !== 'click') {
@@ -90,4 +136,6 @@ export class AppComponent {
   copyUrl() {
     console.log(this.router.url);
   }
+
+  widthCheck() {}
 }
