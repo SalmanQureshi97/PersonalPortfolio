@@ -109,7 +109,7 @@ export class AppComponent {
   }
 
   cardClicked(id: any, event: any) {
-    this.tester = 'CLCIKED';
+    this.tester = screen.orientation.type;
     event.preventDefault();
     if (screen.orientation.type) {
       if (screen.orientation.type === 'landscape-primary') {
@@ -130,7 +130,7 @@ export class AppComponent {
         }
       }
     } else {
-      this.tester = 'ARAY WAH GANDU';
+      // this.tester = 'ARAY WAH GANDU';
     }
   }
 
