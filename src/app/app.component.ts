@@ -39,7 +39,8 @@ export class AppComponent {
   githubStats: any;
   hidden = false;
   marginTop = '0px';
-  tester = false;
+  tester;
+  type;
 
   flip1: string = 'default';
   flip2: string = 'default';
@@ -108,7 +109,7 @@ export class AppComponent {
   }
 
   cardClicked(id: any, event: any) {
-    this.tester = true;
+    this.tester = screen.orientation.type;
     event.preventDefault();
     if (screen.orientation.type === 'landscape-primary') {
       if (event.type !== 'click') {
