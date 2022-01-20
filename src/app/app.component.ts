@@ -109,6 +109,7 @@ export class AppComponent {
   }
 
   cardClicked(id: any, event: any) {
+    this.tester = 'CLCIKED';
     event.preventDefault();
     if (screen.orientation.type) {
       if (screen.orientation.type === 'landscape-primary') {
