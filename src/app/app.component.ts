@@ -109,7 +109,6 @@ export class AppComponent {
   }
 
   cardClicked(id: any, event: any) {
-    this.tester = event;
     //this.tester = screen.orientation.type;
     event.preventDefault();
     if (screen.orientation.type) {
@@ -122,6 +121,8 @@ export class AppComponent {
           }
         }
       } else {
+        console.log(event);
+        this.tester = event.type;
         if (event.type === 'click') {
           if (this['flip' + id] === 'default') {
             this['flip' + id] = 'flipped';
