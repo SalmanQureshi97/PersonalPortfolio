@@ -130,7 +130,7 @@ export class AppComponent {
         }
       }
     } else {
-      this.tester = 'ARAY WAH GANDU';
+      this.tester = event;
       console.log(event);
       //this.tester = event.type;
     }
