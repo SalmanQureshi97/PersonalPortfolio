@@ -121,8 +121,6 @@ export class AppComponent {
           }
         }
       } else {
-        console.log(event);
-        this.tester = event.type;
         if (event.type === 'click') {
           if (this['flip' + id] === 'default') {
             this['flip' + id] = 'flipped';
@@ -132,7 +130,9 @@ export class AppComponent {
         }
       }
     } else {
-      // this.tester = 'ARAY WAH GANDU';
+      this.tester = 'ARAY WAH GANDU';
+      console.log(event);
+      //this.tester = event.type;
     }
   }
 
