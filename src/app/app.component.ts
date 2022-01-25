@@ -110,6 +110,39 @@ export class AppComponent {
 
   cardClicked(id: any, event: any) {
     //this.tester = screen.orientation.type;
+    if (this['flip' + id] === 'default') {
+      this['flip' + id] = 'flipped';
+    } else {
+      this['flip' + id] = 'default';
+    }
+    //event.preventDefault();
+    // if (screen.orientation.type) {
+    //   if (screen.orientation.type === 'landscape-primary') {
+    //     if (event.type !== 'click') {
+    //       if (this['flip' + id] === 'default') {
+    //         this['flip' + id] = 'flipped';
+    //       } else {
+    //         this['flip' + id] = 'default';
+    //       }
+    //     }
+    //   } else {
+    //     if (event.type === 'click') {
+    //       if (this['flip' + id] === 'default') {
+    //         this['flip' + id] = 'flipped';
+    //       } else {
+    //         this['flip' + id] = 'default';
+    //       }
+    //     }
+    //   }
+    // } else {
+    //   this.tester = event;
+    //   console.log(event);
+    //   //this.tester = event.type;
+    // }
+  }
+
+  cardHovered(id: any, event: any) {
+    //this.tester = screen.orientation.type;
     event.preventDefault();
     if (screen.orientation.type) {
       if (screen.orientation.type === 'landscape-primary') {
@@ -129,10 +162,9 @@ export class AppComponent {
           }
         }
       }
-    } else {
-      this.tester = event;
-      console.log(event);
-      //this.tester = event.type;
+    }
+    if (event.type === 'mouseout') {
+      this['flip' + id] = 'default';
     }
   }
 
