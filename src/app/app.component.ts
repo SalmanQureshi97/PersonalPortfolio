@@ -110,21 +110,20 @@ export class AppComponent {
 
   cardClicked(id: any, event: any) {
     //this.tester = screen.orientation.type;
-    console.log('CArd CLicked Called', event.type);
     if (typeof screen.orientation === 'undefined') {
+      console.log('Print if Phone', event.type);
+
       if (this['flip' + id] === 'default') {
         this['flip' + id] = 'flipped';
       } else {
         this['flip' + id] = 'default';
       }
     } else {
-      console.log('This should not be printing');
-      if (event.type != 'mouseout' || event.type != 'mouseover') {
-        if (this['flip' + id] === 'default') {
-          this['flip' + id] = 'flipped';
-        } else {
-          this['flip' + id] = 'default';
-        }
+      console.log('Print if desktop', event.type);
+      if (this['flip' + id] === 'default') {
+        this['flip' + id] = 'flipped';
+      } else {
+        this['flip' + id] = 'default';
       }
     }
   }
@@ -133,7 +132,7 @@ export class AppComponent {
     //this.tester = screen.orientation.type;
     event.preventDefault();
     if (typeof screen.orientation !== 'undefined') {
-      console.log('THis should not be printing');
+      console.log('Print If Desktop');
       if (screen.orientation.type) {
         if (screen.orientation.type === 'landscape-primary') {
           if (event.type !== 'click') {
@@ -157,7 +156,7 @@ export class AppComponent {
         this['flip' + id] = 'default';
       }
     } else {
-      console.log('Hovered Called', event.type, 'But I aint doing nothing');
+      console.log('Print if Phone', event.type);
     }
   }
 
