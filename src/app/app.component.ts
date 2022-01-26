@@ -110,6 +110,7 @@ export class AppComponent {
 
   cardClicked(id: any, event: any) {
     //this.tester = screen.orientation.type;
+    console.log('CArd CLicked Called', event.type);
     if (event.type != 'mouseout' || event.type != 'mouseover') {
       if (this['flip' + id] === 'default') {
         this['flip' + id] = 'flipped';
@@ -145,6 +146,8 @@ export class AppComponent {
   }
 
   cardHovered(id: any, event: any) {
+    console.log('Hovered Called', event.type);
+
     //this.tester = screen.orientation.type;
     event.preventDefault();
     if (typeof screen.orientation !== 'undefined') {
@@ -171,7 +174,7 @@ export class AppComponent {
         this['flip' + id] = 'default';
       }
     } else {
-      console.log(event);
+      console.log(event.ty);
       if (this['flip' + id] === 'default') {
         this['flip' + id] = 'flipped';
       } else {
