@@ -111,46 +111,29 @@ export class AppComponent {
   cardClicked(id: any, event: any) {
     //this.tester = screen.orientation.type;
     console.log('CArd CLicked Called', event.type);
-    if (event.type != 'mouseout' || event.type != 'mouseover') {
+    if (typeof screen.orientation === 'undefined') {
       if (this['flip' + id] === 'default') {
         this['flip' + id] = 'flipped';
       } else {
         this['flip' + id] = 'default';
       }
+    } else {
+      console.log('This should not be printing');
+      if (event.type != 'mouseout' || event.type != 'mouseover') {
+        if (this['flip' + id] === 'default') {
+          this['flip' + id] = 'flipped';
+        } else {
+          this['flip' + id] = 'default';
+        }
+      }
     }
-
-    //event.preventDefault();
-    // if (screen.orientation.type) {
-    //   if (screen.orientation.type === 'landscape-primary') {
-    //     if (event.type !== 'click') {
-    //       if (this['flip' + id] === 'default') {
-    //         this['flip' + id] = 'flipped';
-    //       } else {
-    //         this['flip' + id] = 'default';
-    //       }
-    //     }
-    //   } else {
-    //     if (event.type === 'click') {
-    //       if (this['flip' + id] === 'default') {
-    //         this['flip' + id] = 'flipped';
-    //       } else {
-    //         this['flip' + id] = 'default';
-    //       }
-    //     }
-    //   }
-    // } else {
-    //   this.tester = event;
-    //   console.log(event);
-    //   //this.tester = event.type;
-    // }
   }
 
   cardHovered(id: any, event: any) {
-    console.log('Hovered Called', event.type);
-
     //this.tester = screen.orientation.type;
     event.preventDefault();
     if (typeof screen.orientation !== 'undefined') {
+      console.log('THis should not be printing');
       if (screen.orientation.type) {
         if (screen.orientation.type === 'landscape-primary') {
           if (event.type !== 'click') {
@@ -174,12 +157,7 @@ export class AppComponent {
         this['flip' + id] = 'default';
       }
     } else {
-      console.log(event.ty);
-      if (this['flip' + id] === 'default') {
-        this['flip' + id] = 'flipped';
-      } else {
-        this['flip' + id] = 'default';
-      }
+      console.log('Hovered Called', event.type, 'But I aint doing nothing');
     }
   }
 
