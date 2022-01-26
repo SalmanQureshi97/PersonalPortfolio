@@ -171,6 +171,7 @@ export class AppComponent {
         this['flip' + id] = 'default';
       }
     } else {
+      console.log(event);
       if (this['flip' + id] === 'default') {
         this['flip' + id] = 'flipped';
       } else {
